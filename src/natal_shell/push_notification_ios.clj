@@ -50,6 +50,14 @@
    (clojure.core/list 'js/ReactNative.PushNotificationIOS)
    args)))
 (clojure.core/defmacro
+ get-scheduled-local-notifications
+ [& args]
+ (clojure.core/seq
+  (clojure.core/concat
+   (clojure.core/list '.getScheduledLocalNotifications)
+   (clojure.core/list 'js/ReactNative.PushNotificationIOS)
+   args)))
+(clojure.core/defmacro
  add-event-listener
  [& args]
  (clojure.core/seq
@@ -87,14 +95,6 @@
  (clojure.core/seq
   (clojure.core/concat
    (clojure.core/list '.checkPermissions)
-   (clojure.core/list 'js/ReactNative.PushNotificationIOS)
-   args)))
-(clojure.core/defmacro
- pop-initial-notification
- [& args]
- (clojure.core/seq
-  (clojure.core/concat
-   (clojure.core/list '.popInitialNotification)
    (clojure.core/list 'js/ReactNative.PushNotificationIOS)
    args)))
 (clojure.core/defmacro

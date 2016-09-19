@@ -17,6 +17,20 @@
    (clojure.core/list '.-hairlineWidth)
    (clojure.core/list 'js/ReactNative.StyleSheet))))
 (clojure.core/defmacro
+ absolute-fill
+ []
+ (clojure.core/seq
+  (clojure.core/concat
+   (clojure.core/list '.-absoluteFill)
+   (clojure.core/list 'js/ReactNative.StyleSheet))))
+(clojure.core/defmacro
+ absolute-fill-object
+ []
+ (clojure.core/seq
+  (clojure.core/concat
+   (clojure.core/list '.-absoluteFillObject)
+   (clojure.core/list 'js/ReactNative.StyleSheet))))
+(clojure.core/defmacro
  flatten
  []
  (clojure.core/seq

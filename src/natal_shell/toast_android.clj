@@ -10,6 +10,14 @@
    (clojure.core/list 'js/ReactNative.ToastAndroid)
    args)))
 (clojure.core/defmacro
+ show-with-gravity
+ [& args]
+ (clojure.core/seq
+  (clojure.core/concat
+   (clojure.core/list '.showWithGravity)
+   (clojure.core/list 'js/ReactNative.ToastAndroid)
+   args)))
+(clojure.core/defmacro
  short
  []
  (clojure.core/seq
@@ -22,4 +30,25 @@
  (clojure.core/seq
   (clojure.core/concat
    (clojure.core/list '.-LONG)
+   (clojure.core/list 'js/ReactNative.ToastAndroid))))
+(clojure.core/defmacro
+ top
+ []
+ (clojure.core/seq
+  (clojure.core/concat
+   (clojure.core/list '.-TOP)
+   (clojure.core/list 'js/ReactNative.ToastAndroid))))
+(clojure.core/defmacro
+ bottom
+ []
+ (clojure.core/seq
+  (clojure.core/concat
+   (clojure.core/list '.-BOTTOM)
+   (clojure.core/list 'js/ReactNative.ToastAndroid))))
+(clojure.core/defmacro
+ center
+ []
+ (clojure.core/seq
+  (clojure.core/concat
+   (clojure.core/list '.-CENTER)
    (clojure.core/list 'js/ReactNative.ToastAndroid))))

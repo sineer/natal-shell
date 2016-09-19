@@ -10,6 +10,14 @@
    (clojure.core/list 'js/ReactNative.CameraRoll)
    args)))
 (clojure.core/defmacro
+ save-to-camera-roll
+ [& args]
+ (clojure.core/seq
+  (clojure.core/concat
+   (clojure.core/list '.saveToCameraRoll)
+   (clojure.core/list 'js/ReactNative.CameraRoll)
+   args)))
+(clojure.core/defmacro
  get-photos
  [& args]
  (clojure.core/seq
