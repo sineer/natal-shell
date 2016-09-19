@@ -32,7 +32,7 @@
 
 (defn fetch-comps! [page]
   (go
-    (->> (select page (select-doc-section 8))
+    (->> (select page (select-doc-section 5))
       (map #(fetch! (get-in % [:attrs :href])))
       doall
       (map <!!)
@@ -43,7 +43,7 @@
 
 (defn fetch-apis! [page]
   (go
-    (->> (select page (select-doc-section 9))
+    (->> (select page (select-doc-section 6))
       (map #(fetch! (get-in % [:attrs :href])))
       doall
       (map <!!)
